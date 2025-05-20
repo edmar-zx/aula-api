@@ -18,8 +18,11 @@ export const Image = styled.img`
 export const Title = styled.h2`
     margin: 0.5rem 0;
     font-size: 1.2rem;
+    text-align: center;
+    
 `
 export const Info = styled.p`
     Color: #555;
     font-size: 0.9rem;
+    text-align: center;
 `

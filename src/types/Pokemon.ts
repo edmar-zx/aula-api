@@ -1,5 +1,12 @@
+export interface Pokemon {
+  name: string; // Nome do Pokémon ou recurso// URL para os detalhes do Pokémon ou recurso
+  image: string; // URL da imagem do Pokémon
+  types: string[]; // Tipos do Pokémon
+}
 
-// Interface para a resposta da lista de Pokémon
+
+
+/* Interface para a resposta da lista de Pokémon
 export interface PokemonListResponse {
   count: number; // Total de Pokémon disponíveis
   next: string | null; // URL para a próxima página de resultados
@@ -88,4 +95,4 @@ export interface Stat {
 export interface Type {
   slot: number;
   type: NamedAPIResource;
-}
+} */

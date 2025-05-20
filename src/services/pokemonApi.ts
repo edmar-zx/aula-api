@@ -11,10 +11,10 @@ const api = axios.create({
 })
 
 
-export async function fetchPokemons(search = '') {
+export async function fetchPokemons() {
     try {
-        const response = await api.get<PokemonResponse>(`?search=${search}`);
-        return response.data.pokemons ?? [];
+        const response = await fetch("https://pokeapi.co/api/v2/pokemon-species");
+        return response.json();
     } catch (error) {
         console.error("Erro ao buscar pokemons:", error);
     }
