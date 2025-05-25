@@ -1,10 +1,5 @@
-import { Link } from "react-router-dom";
-import type { Pokemon } from "../types/Pokemon";
-import { Card, Title, Image, Info } from "./PokemonCard.styles";
-
-/* interface Props {
-    pokemon: Pokemon;
-} */
+import type { Pokemon } from "../../types/Pokemon";
+import { Card, Title, Image, Info } from "./styles";
 
 export function PokemonCard({ name, image, types }: Pokemon) {
 
@@ -15,11 +10,8 @@ export function PokemonCard({ name, image, types }: Pokemon) {
     return types[0].type.name;
   }
 
-
-
  return (
-      <Card>
-        <Link to={`${"id"}`}/> 
+      <Card>  
         <Image src={image}/>
         <Title>{name}</Title>
         <Info>

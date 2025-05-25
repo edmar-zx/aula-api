@@ -1,54 +1,53 @@
-# React + TypeScript + Vite
+# Pokédex API com Reac
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Uma Pokédex interativa construída com **React + TypeScript**, utilizando a **PokéAPI** para exibir detalhes, variações, tipos e ataques dos Pokémons. O projeto conta com funcionalidades modernas como **busca em tempo real**, **navbar inteligente com scroll** e **navegação entre páginas**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tecnologias
 
-## Expanding the ESLint configuration
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/)
+- [React Router](https://reactrouter.com/)
+- [Styled-Components](https://styled-components.com/)
+- [Axios](https://axios-http.com/)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 📱 Responsividade
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+O layout foi otimizado para funcionar perfeitamente em diferentes tamanhos de tela, com breakpoints definidos para:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **1024px** – Desktop
+- **768px** – Tablet
+- **480px** – Celulares
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+---
+
+## Funcionalidades
+
+- Busca dinâmica por nome do Pokémon
+- Listagem completa de até 1302 Pokémons
+- Detalhes individuais por ID com:
+  - Altura e peso
+  - Tipos e habilidades
+  - Barra de stats
+  - Lista de ataques
+  - Variações do Pokémon
+- Navbar que some ao descer e reaparece ao subir o scroll
+
+## ⚙️ Instalação
+
+```bash
+# Clone o repositório
+git clone https://github.com/edmar-zx/aula-api.git
+cd pokemon-catalogue
+
+# Instale as dependências
+npm install
+
+# Rode a aplicação
+npm run dev
+
 ```
