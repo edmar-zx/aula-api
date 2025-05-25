@@ -19,6 +19,7 @@ export const Grid = styled.div`
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(4, 1fr);
+  align-items: stretch;  // importante para igualar altura dos cards
 
   @media (max-width: 1024px) {
     grid-template-columns: repeat(3, 1fr);
@@ -37,7 +38,11 @@ export const CardWrapper = styled.div`
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   cursor: pointer;
   border-radius: 12px;
-
+  
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  
   &:hover {
     transform: scale(1.03);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
